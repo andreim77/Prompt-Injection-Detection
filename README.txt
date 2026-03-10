@@ -69,8 +69,12 @@ Simulates knowledge base retrieval results with two documents:
 - a malicious document containing a prompt injection
 
 ---
+== Tradeoffs
 
 This implementation intentionally keeps the solution minimal and easy to reason about.
+- Rule-based detection: The agent detects prompt injection using simple pattern matching. This keeps the implementation clear, but it would not catch all possible attack variations.
+- Limited KB simulation: The knowledge base is simulated with two documents for clarity rather than a full retrieval pipeline.
+- Single tool example: Only one privileged tool (`create_ticket`) is implemented to demonstrate the tool boundary principle.
 The goal of this demo is to clearly illustrate the security reasoning and tool boundary principle, rather than build a full production defense system.
 
 ---
